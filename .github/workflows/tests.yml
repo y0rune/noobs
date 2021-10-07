@@ -34,3 +34,9 @@ jobs:
           path: "scripts/"
           pattern: "*.sh"
           exclude: "./.git/*"
+      - name: ShellCheck
+        uses: ludeeus/action-shellcheck@1.1.0
+        with:
+          severity: error
+          scandir: './scripts'
+          format: tty
